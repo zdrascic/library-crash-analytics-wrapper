@@ -12,7 +12,7 @@ import android.app.Application;
  * @author Zeljko Drascic 
  *
  */
-public class AcraLog {
+public class CALog {
 
 	private static LogLevel level = LogLevel.Trace;
 	private static boolean acra = true;
@@ -21,7 +21,7 @@ public class AcraLog {
 	
 	private static boolean acraInitialized = false;
 	
-	private AcraLog(String p/*Logger log*/) {
+	private CALog(String p/*Logger log*/) {
 		this.p = p/*Logger log*/;
 		//this.log = log;
 	}
@@ -30,8 +30,8 @@ public class AcraLog {
 		return level;
 	}
 	
-	public static AcraLog getLog(Package p) {
-		return new AcraLog(p.getName());
+	public static CALog getLog(Package p) {
+		return new CALog(p.getName());
 	}
 	
 	public void init(Application app) {
